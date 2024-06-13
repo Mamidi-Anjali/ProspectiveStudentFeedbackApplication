@@ -26,15 +26,15 @@ Clone or Download the Angular Project: If you have the project in a Git reposito
 node -v
 npm -v.
 
-2.Install Angular CLI: Install Angular CLI globally if you haven't already.
+2. Install Angular CLI: Install Angular CLI globally if you haven't already.
 npm install -g @angular/cli.
 
 3. Navigate to Your Project Directory: Open a terminal or command prompt and navigate to the root directory of your Angular project. Or go to the project folder and select open with VS Code.
 
-4.Install Project Dependencies: Run the following command to install the project dependencies defined in package.json:
+4. Install Project Dependencies: Run the following command to install the project dependencies defined in package.json:
 npm install.
 
-5.Run the Application: Start the development server by running:
+5. Run the Application: Start the development server by running:
 ng serve or npm start.
 
 6. Access the Application: Open your web browser and navigate to http://localhost:4200. Your Angular application should be running and accessible.
