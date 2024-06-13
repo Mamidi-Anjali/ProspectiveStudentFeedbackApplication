@@ -1,0 +1,158 @@
+<!-- HTML page for survey form -->
+<div class="form-body">
+  <br/><br/>
+  <h2> Survey Form</h2>
+  <form [formGroup]="surveyForm" (ngSubmit)="onSubmit()">
+
+      <!-- First Name -->
+      <div>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" formControlName="firstName">
+        <div *ngIf="surveyForm.get('firstName')?.touched && surveyForm.get('firstName')?.invalid">
+          First name is required.
+        </div>
+      </div>
+    
+      <!-- Last Name -->
+      <div>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" formControlName="lastName">
+        <div *ngIf="surveyForm.get('lastName')?.touched && surveyForm.get('lastName')?.invalid">
+          Last name is required.
+        </div>
+      </div>
+    
+      <!-- Street Address -->
+      <div>
+        <label for="streetAddress">Street Address:</label>
+        <input type="text" id="streetAddress" formControlName="streetAddress">
+        <div *ngIf="surveyForm.get('streetAddress')?.touched && surveyForm.get('streetAddress')?.invalid">
+          Street address is required.
+        </div>
+      </div>
+    
+      <!-- City -->
+      <div>
+        <label for="city">City:</label>
+        <input type="text" id="city" formControlName="city">
+        <div *ngIf="surveyForm.get('city')?.touched && surveyForm.get('city')?.invalid">
+          City is required.
+        </div>
+      </div>
+    
+      <!-- State -->
+      <div>
+        <label for="state">State:</label>
+        <input type="text" id="state" formControlName="state">
+        <div *ngIf="surveyForm.get('state')?.touched && surveyForm.get('state')?.invalid">
+          State is required.
+        </div>
+      </div>
+    
+      <!-- ZIP -->
+      <div>
+        <label for="zip">ZIP Code:</label>
+        <input type="text" id="zip" formControlName="zip">
+        <div *ngIf="surveyForm.get('zip')?.touched && surveyForm.get('zip')?.invalid">
+          Valid ZIP code is required.
+        </div>
+      </div>
+    
+      <!-- Telephone Number -->
+      <div>
+        <label for="telephoneNumber">Telephone Number:</label>
+        <input type="tel" id="telephoneNumber" formControlName="telephoneNumber">
+        <div *ngIf="surveyForm.get('telephoneNumber')?.touched && surveyForm.get('telephoneNumber')?.invalid">
+          Valid telephone number is required.
+        </div>
+      </div>
+    
+      <!-- Email -->
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" formControlName="email">
+        <div *ngIf="surveyForm.get('email')?.touched && surveyForm.get('email')?.invalid">
+          Valid email is required.
+        </div>
+      </div>
+    
+      <!-- Date of Survey -->
+      <div>
+        <label for="dateOfSurvey">Date of Survey:</label>
+        <input type="date" id="dateOfSurvey" formControlName="dateOfSurvey">
+        <div *ngIf="surveyForm.get('dateOfSurvey')?.touched && surveyForm.get('dateOfSurvey')?.invalid">
+          Date of survey is required.
+        </div>
+      </div>
+    
+      <!-- Like Most Section -->
+      <div formGroupName="likeMost">
+        <label>What did you like most about the campus?</label>
+        <div>
+          <input type="checkbox" id="students" formControlName="students">
+          <label for="students">Students</label>
+        </div>
+        <div>
+          <input type="checkbox" id="location" formControlName="location">
+          <label for="location">Location</label>
+        </div>
+        <div>
+          <input type="checkbox" id="campus" formControlName="campus">
+          <label for="campus">Campus</label>
+        </div>
+        <div>
+          <input type="checkbox" id="atmosphere" formControlName="atmosphere">
+          <label for="atmosphere">Atmosphere</label>
+        </div>
+        <div>
+          <input type="checkbox" id="dormRooms" formControlName="dormRooms">
+          <label for="dormRooms">Dorm Rooms</label>
+        </div>
+        <div>
+          <input type="checkbox" id="sports" formControlName="sports">
+          <label for="sports">Sports</label>
+        </div>
+      </div>
+    
+      <!-- Interest Origin -->
+      <div>
+        <label for="interestOrigin">How did you hear about us?</label>
+        <select id="interestOrigin" formControlName="interestOrigin">
+          <option value="">Select an option</option>
+          <option value="friends">Friends</option>
+          <option value="television">Television</option>
+          <option value="internet">Internet</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+    
+      <!-- Recommendation Likelihood -->
+      <div>
+        <label for="recommendationLikelihood">Likelihood of Recommending:</label>
+        <select id="recommendationLikelihood" formControlName="recommendationLikelihood">
+          <option value="">Select an option</option>
+          <option value="veryLikely">Very Likely</option>
+          <option value="likely">Likely</option>
+          <option value="unlikely">Unlikely</option>
+        </select>
+      </div>
+    
+      <!-- Additional Comments -->
+      <div>
+        <label for="additionalComments">Additional Comments:</label>
+        <textarea id="additionalComments" formControlName="additionalComments"></textarea>
+      </div>
+    
+      <!-- Submit Button -->
+      <div>
+        <button type="submit" [disabled]="!surveyForm.valid">Submit Survey</button>
+      </div>
+
+      <!-- Submit Button -->
+      <div>
+        <a routerLink="/home" class="btn btn-primary"><button type="cancel" >Cancel</button></a>
+        
+      </div>
+    
+    </form>
+  </div>

@@ -1,0 +1,59 @@
+<!-- survey-list.component.html -->
+<div class="survey-list-container">
+    <h2>Survey List</h2>
+  
+    <!-- HTML page for survey list -->
+    <table *ngIf="surveys && surveys.length; else noDataTemplate">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Street Address</th>
+          <th>City</th>
+          <th>State</th>
+          <th>ZIP</th>
+          <th>Telephone Number</th>
+          <th>Email</th>
+          <th>Date of Survey</th>
+          <th>Liked Students</th>
+          <th>Liked Location</th>
+          <th>Liked Campus</th>
+          <th>Liked Atmosphere</th>
+          <th>Liked Dorm Rooms</th>
+          <th>Liked Sports</th>
+          <th>Interest Origin</th>
+          <th>Recommendation Likelihood</th>
+          <th>Additional Comments</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let survey of surveys">
+          <td>{{ survey.id }}</td>
+          <td>{{ survey.firstName }}</td>
+          <td>{{ survey.lastName }}</td>
+          <td>{{ survey.streetAddress }}</td>
+          <td>{{ survey.city }}</td>
+          <td>{{ survey.state }}</td>
+          <td>{{ survey.zip }}</td>
+          <td>{{ survey.telephoneNumber }}</td>
+          <td>{{ survey.email }}</td>
+          <td>{{ survey.dateOfSurvey | date: 'mediumDate' }}</td>
+          <td>{{ survey.likeStudents ? 'Yes' : 'No' }}</td>
+          <td>{{ survey.likeLocation ? 'Yes' : 'No' }}</td>
+          <td>{{ survey.likeCampus ? 'Yes' : 'No' }}</td>
+          <td>{{ survey.likeAtmosphere ? 'Yes' : 'No' }}</td>
+          <td>{{ survey.likeDormRooms ? 'Yes' : 'No' }}</td>
+          <td>{{ survey.likeSports ? 'Yes' : 'No' }}</td>
+          <td>{{ survey.interestOrigin }}</td>
+          <td>{{ survey.recommendationLikelihood }}</td>
+          <td>{{ survey.additionalComments }}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <ng-template #noDataTemplate>
+      <p>No surveys found.</p>
+    </ng-template>
+  </div>
+  

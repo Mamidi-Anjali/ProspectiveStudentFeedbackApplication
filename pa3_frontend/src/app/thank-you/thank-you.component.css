@@ -1,0 +1,15 @@
+.form-body {
+  text-align: center;
+  margin-top: 50px;
+  background-color : #84e184;
+  height:550px;
+}
+
+h2 {
+  color: #2c3e50;
+}
+
+p {
+  font-size: 16px;
+  color: #34495e;
+}
