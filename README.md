@@ -35,7 +35,7 @@ npm install -g @angular/cli.
 npm install.
 
 5. Run the Application: Start the development server by running:
-ng serve or npm start.
+ npm start.
 
 6. Access the Application: Open your web browser and navigate to http://localhost:4200. Your Angular application should be running and accessible.
 
